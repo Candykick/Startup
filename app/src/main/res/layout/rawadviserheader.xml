@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvAdvPostTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="디자인권 관해서 질문 올립니다."
+        android:textColor="@color/set2White"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/tvAdvPostQName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비공개"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostTitle"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/tvAdvPostDateCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 / 법률자문"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="40dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostTitle"
+        app:layout_constraintLeft_toRightOf="@+id/tvAdvPostQName"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpRawAdvHeaderImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostDateCategory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+    <com.candykick.startup.view.base.HtmlTextView
+        android:id="@+id/tvAdvPostContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="공유경제 플랫폼 서비스를 구상 중입니다. 주말농장에서 나오는 농산품을 교환하는 형태의 서비스인데, 수익화 방안이 마땅치 않아 고민입니다.이 아이디어, 수익화 방안이 있을까요? 고수님들의 답변 구합니다."
+        android:textColor="@color/set2White"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/vpRawAdvHeaderImage"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAdvPostHits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="조회수 1775"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostContents" />
+
+</android.support.constraint.ConstraintLayout>

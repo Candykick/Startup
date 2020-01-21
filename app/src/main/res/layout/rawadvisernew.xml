@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="130dp"
+    android:orientation="vertical"
+    android:background="@color/set2Black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvAdvNewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="디자인권 관해서 질문 올립니다."
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tvAdvNewContents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="공유경제 플랫폼 서비스를 구상 중입니다."
+                android:textColor="@color/set2White"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tvAdvNewDateCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘 / 법률자문"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivAdvNewImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/tvAdvNewAnswer"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="답변수 5"
+            android:background="@drawable/adviserrect"
+            android:textColor="@color/set2White"
+            android:layout_marginTop="4dp"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/tvAdvNewRecommend"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="추천수 130"
+            android:background="@drawable/adviserrect"
+            android:textColor="@color/set2White"
+            android:layout_marginTop="4dp"
+            android:textSize="17sp"/>
+    </LinearLayout>
+    
+</LinearLayout>

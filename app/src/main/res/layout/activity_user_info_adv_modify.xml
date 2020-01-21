@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.userInfo.UserInfoAdvModifyActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarModifyAdv"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/newsetDarkBlue"
+                app:title="">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Space
+                        android:layout_width="@dimen/image_small_width"
+                        android:layout_height="@dimen/image_small_width" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="유저정보 수정"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/set2Black"
+                        android:textSize="20sp"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/image_small_width"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="완료"
+                        android:onClick="@{()->activity.modifyEnd()}"
+                        android:textColor="@color/newsetPureWhite"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:background="@null" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/newsetWhite"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvTitle1ModifyAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 현재 직함/대표 이력"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"/>
+                <EditText
+                    android:id="@+id/etModify1Adv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="현재 직함/대표 이력을 입력하세요."
+                    android:textSize="20sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle1ModifyAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"/>
+                <TextView
+                    android:id="@+id/tvAdvModify1Length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0자/20자"
+                    android:textSize="16sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintRight_toRightOf="@+id/etModify1Adv"
+                    app:layout_constraintTop_toBottomOf="@+id/etModify1Adv" />
+
+                <TextView
+                    android:id="@+id/tvTitle2ModifyAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 한줄 소개"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAdvModify1Length"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="20dp"/>
+                <EditText
+                    android:id="@+id/etModify2Adv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="당신이 어떤 사람인지 알려주세요."
+                    android:textSize="20sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle2ModifyAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"/>
+                <TextView
+                    android:id="@+id/tvAdvModify2Length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0자/20자"
+                    android:textSize="16sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintRight_toRightOf="@+id/etModify2Adv"
+                    app:layout_constraintTop_toBottomOf="@+id/etModify2Adv" />
+
+                <TextView
+                    android:id="@+id/tvTitle3ModifyAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 명함"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAdvModify2Length"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="20dp"/>
+                <ImageView
+                    android:id="@+id/ivUserInfo3Adv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="h,9:5"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle3ModifyAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginEnd="45dp"/>
+                <Button
+                    android:id="@+id/btnAdvNamecardChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="h,9:5"
+                    android:text="명함 바꾸기"
+                    android:background="#99cccccc"
+                    android:onClick="@{()->activity.modifyNamecard()}"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle3ModifyAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginEnd="45dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle4UserInfoAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 상세 이력"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/ivUserInfo3Adv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="20dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvUserInfo4Adv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle4UserInfoAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                <Button
+                    android:id="@+id/btnJoinAddRaw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="추가하기"
+                    android:textSize="15sp"
+                    android:textColor="@color/set2White"
+                    android:onClick="@{()->activity.addCareer()}"
+                    android:background="@color/set2GrayBlue"
+                    app:layout_constraintTop_toBottomOf="@+id/rvUserInfo4Adv"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

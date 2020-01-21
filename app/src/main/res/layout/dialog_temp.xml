@@ -1,0 +1,133 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.TempDialog" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="450dp"
+        android:background="@color/set2GrayBlack">
+
+        <Button
+            android:id="@+id/btnDiaTmpCancel"
+            android:layout_width="148dp"
+            android:layout_height="55dp"
+            android:background="@color/set2White"
+            android:text="취소"
+            android:textSize="19sp"
+            android:onClick="@{()->activity.btnCancel()}"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+        <Button
+            android:id="@+id/btnDiaTmpOk"
+            android:layout_width="148dp"
+            android:layout_height="55dp"
+            android:background="@color/set2White"
+            android:text="선택"
+            android:textSize="19sp"
+            android:onClick="@{()->activity.btnSelect()}"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDiaTmp1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid1"
+            android:text="분류코드"
+            android:textColor="@color/set2Black"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tvDiaTmp11"
+            android:layout_width="218dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid2"
+            android:text="01500"
+            android:textColor="@color/set2Black"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvDiaTmp1"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/tvDiaTmp2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid1"
+            android:text="분류명"
+            android:textColor="@color/set2Black"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvDiaTmp1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tvDiaTmp21"
+            android:layout_width="218dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid2"
+            android:text="기타 작물 재배업"
+            android:textColor="@color/set2Black"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDiaTmp1"
+            app:layout_constraintLeft_toRightOf="@+id/tvDiaTmp2" />
+        <TextView
+            android:id="@+id/tvDiaTmp3"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bordergrid1"
+            android:text="설명"
+            android:textColor="@color/set2Black"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvDiaTmp2"
+            app:layout_constraintBottom_toTopOf="@+id/btnDiaTmpCancel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tvDiaTmp31"
+            android:layout_width="218dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bordergrid2"
+            android:text="노지에서 약용작물, 사료작물, 기름추출용 작물 및 공업용 원료작물 등 달리 분류되지 않은 기타 작물을 재배하는 산업활동을 말한다.
+
+&lt;예시&gt;
+·인삼 재배
+·호프 재배
+·섬유작물 재배
+·비 및 솔 제조용 작물 재배
+·유지작물 재배
+·조물재료용 작물 재배
+·낙화생(땅콩) 재배
+·잎담배 재배
+
+&lt;제외&gt;
+·곡물 및 기타 식량작물 재배(01110)
+·음료용 및 향신용 작물 재배(01132)
+·작물 배양 재배(01159)
+·식용과 사료용으로 모두 가능한 작물은 해당 작물 재배업으로 분류"
+            android:textColor="@color/set2Black"
+            android:textSize="10sp"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvDiaTmp2"
+            app:layout_constraintBottom_toTopOf="@+id/btnDiaTmpCancel"
+            app:layout_constraintLeft_toRightOf="@+id/tvDiaTmp2"
+            android:layout_marginBottom="4dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    tools:context="com.candykick.startup.Dialog2Activity">
+
+    <TextView
+        android:id="@+id/tvDialogTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="어떤 기능을 실행할까요?"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnGallery"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="갤러리"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDialogTitle2"/>
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="카메라"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDialogTitle2"/>
+
+</android.support.constraint.ConstraintLayout>

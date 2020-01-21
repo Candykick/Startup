@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.loginAccount.JoinOutActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black">
+
+            <Button
+                android:id='@+id/btnjoJoin'
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/set2GrayBlue"
+                android:text="회원가입"
+                android:textSize="19sp"
+                android:onClick="@{()->activity.fnJoin4()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/tvjoTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="세금계산서 발행 여부"
+                android:textSize="18sp"
+                android:textColor="@color/set2White"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"/>
+            <RadioGroup
+                android:id="@+id/rgJoinOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvjoTitle1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp">
+                <RadioButton
+                    android:id="@+id/rbjoOkay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="발행 가능"/>
+                <RadioButton
+                    android:id="@+id/rbjoNope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text="발행 불가"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvjoTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한 줄 소개"
+                android:textSize="18sp"
+                android:textColor="@color/set2White"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgJoinOut"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:id="@+id/tvjoTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="본인에 대해 짧게 소개해주세요! (최대 20자)"
+                android:textSize="14sp"
+                android:textColor="@color/set2White"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvjoTitle2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"/>
+            <EditText
+                android:id="@+id/etJoinOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:textColor="@color/set2White"
+                app:layout_constraintTop_toBottomOf="@+id/tvjoTitle3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/tvjoEtLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0자/20자"
+                android:textSize="16sp"
+                android:textColor="@color/set2White"
+                app:layout_constraintRight_toRightOf="@+id/etJoinOut"
+                app:layout_constraintTop_toBottomOf="@+id/etJoinOut"
+                android:layout_marginTop="3dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

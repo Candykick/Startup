@@ -1,0 +1,135 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinAdv2Fragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black">
+
+        <TextView
+            android:id="@+id/tvjaTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현재 직함/직업"
+            android:textSize="18sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvjaTitle6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strTmp"
+            android:textSize="14sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaTitle3"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"/>
+        <EditText
+            android:id="@+id/etjaJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/set2White"
+            android:textSize="15sp"
+            android:maxLength="20"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaTitle6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp" />
+        <TextView
+            android:id="@+id/tvjaEtLength1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0자/20자"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintRight_toRightOf="@+id/etjaJob"
+            app:layout_constraintTop_toBottomOf="@+id/etjaJob"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/tvjaTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한 줄 소개"
+            android:textSize="18sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaEtLength1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/tvjaTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="본인에 대해 짧게 소개해주세요! (최대 20자)"
+            android:textSize="14sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaTitle4"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"/>
+        <EditText
+            android:id="@+id/etjaIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaTitle5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tvjaEtLength2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0자/20자"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintRight_toRightOf="@+id/etjaIntro"
+            app:layout_constraintTop_toBottomOf="@+id/etjaIntro"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/tvjaTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="명함을 올려주세요."
+            android:textSize="18sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaEtLength2" />
+        <ImageView
+            android:id="@+id/ivjiCard"
+            android:src="@drawable/insertcard"
+            android:onClick="@{()->fragment.fnNameCard2()}"
+            android:layout_width="216dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaTitle2"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

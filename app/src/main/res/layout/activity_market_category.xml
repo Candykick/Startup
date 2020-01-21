@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.marketAct.MarketCategoryActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black">
+
+            <LinearLayout
+                android:id="@+id/llMC1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMCDesign"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabdesign2"
+                    android:onClick="@{() -> activity.gotoDesign()}"
+                    android:layout_margin="7dp"/>
+                    <!--android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"/>-->
+                <Button
+                    android:id="@+id/btnMCProgramming"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabprogramming2"
+                    android:onClick="@{() -> activity.gotoProgramming()}"
+                    android:layout_margin="7dp"/>
+                    <!--android:layout_marginLeft="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginEnd="2dp"/>-->
+                <Button
+                    android:id="@+id/btnMCContents"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabcontents2"
+                    android:onClick="@{() -> activity.gotoContents()}"
+                    android:layout_margin="7dp"/>
+                    <!--android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMC2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llMC1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMCMarketing"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabmarketing2"
+                    android:onClick="@{() -> activity.gotoMarketing()}"
+                    android:layout_margin="7dp"/>
+                <Button
+                    android:id="@+id/btnMCDocument"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabdocument2"
+                    android:onClick="@{() -> activity.gotoDocument()}"
+                    android:layout_margin="7dp"/>
+                <Button
+                    android:id="@+id/btnMCConsulting"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabconsulting2"
+                    android:onClick="@{() -> activity.gotoConsulting()}"
+                    android:layout_margin="7dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMC3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llMC2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMCMaker"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabcustom2"
+                    android:onClick="@{() -> activity.gotoMaker()}"
+                    android:layout_margin="7dp" />
+                <Button
+                    android:id="@+id/btnMCTranslate"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabtranslate2"
+                    android:onClick="@{() -> activity.gotoTranslate()}"
+                    android:layout_margin="7dp"/>
+                <Button
+                    android:id="@+id/btnMCPlace"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:background="@drawable/outtabplace2"
+                    android:onClick="@{() -> activity.gotoPlace()}"
+                    android:layout_margin="7dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llMC4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llMC3"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMCPrint"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:text="인쇄"
+                    android:onClick="@{() -> activity.gotoPrint()}"
+                    android:background="@color/set2GrayBlue"
+                    android:layout_margin="7dp" />
+                <Button
+                    android:id="@+id/btnMCNull1"
+                    android:background="@null"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:layout_margin="7dp"/>
+                <Button
+                    android:id="@+id/btnMCNull2"
+                    android:background="@null"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintDimensionRatio="h,1:1"
+                    android:layout_margin="7dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="서비스 등록하기"
+                android:onClick="@{() -> activity.addNewService()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/set2GrayBlack"
+                android:textColor="@color/set2Black"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

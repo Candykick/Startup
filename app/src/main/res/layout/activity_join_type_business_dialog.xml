@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinTypeBusinessDialog" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2GrayBlack">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/glJTB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"/>
+
+        <Button
+            android:id="@+id/btnciDiaTmpCancel"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@color/set2White"
+            android:text="취소"
+            android:textSize="19sp"
+            android:textColor="@color/set2Black"
+            android:onClick="@{()->activity.btnCancel()}"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/glJTB"
+            android:layout_marginEnd="2dp"/>
+        <Button
+            android:id="@+id/btnciDiaTmpOk"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:background="@color/set2White"
+            android:text="선택"
+            android:textColor="@color/set2Black"
+            android:textSize="19sp"
+            android:onClick="@{()->activity.btnSelect()}"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/glJTB"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="2dp"/>
+
+        <TextView
+            android:id="@+id/tvciDiaTmp1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid1"
+            android:text="분류코드"
+            android:textColor="@color/set2White"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tvciDiaTmp11"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid2"
+            android:text="01500"
+            android:textColor="@color/set2White"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvciDiaTmp1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"/>
+        <TextView
+            android:id="@+id/tvciDiaTmp2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid1"
+            android:text="분류명"
+            android:textColor="@color/set2White"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvciDiaTmp1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tvciDiaTmp21"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bordergrid2"
+            android:text="기타 작물 재배업"
+            android:textColor="@color/set2White"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvciDiaTmp1"
+            app:layout_constraintLeft_toRightOf="@+id/tvciDiaTmp2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="6dp"/>
+        <TextView
+            android:id="@+id/tvciDiaTmp3"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bordergrid1"
+            android:text="설명"
+            android:textColor="@color/set2White"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/tvciDiaTmp2"
+            app:layout_constraintBottom_toTopOf="@+id/btnciDiaTmpCancel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tvciDiaTmp31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bordergrid2"
+            android:text="노지에서 약용작물, 사료작물, 기름추출용 작물 및 공업용 원료작물 등 달리 분류되지 않은 기타 작물을 재배하는 산업활동을 말한다.
+
+&lt;예시&gt;
+·인삼 재배
+·호프 재배
+·섬유작물 재배
+·비 및 솔 제조용 작물 재배
+·유지작물 재배
+·조물재료용 작물 재배
+·낙화생(땅콩) 재배
+·잎담배 재배
+
+&lt;제외&gt;
+·곡물 및 기타 식량작물 재배(01110)
+·음료용 및 향신용 작물 재배(01132)
+·작물 배양 재배(01159)
+·식용과 사료용으로 모두 가능한 작물은 해당 작물 재배업으로 분류"
+            android:textColor="@color/set2White"
+            android:textSize="13sp"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvciDiaTmp2"
+            app:layout_constraintBottom_toTopOf="@+id/btnciDiaTmpCancel"
+            app:layout_constraintLeft_toRightOf="@+id/tvciDiaTmp2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="4dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
+
+

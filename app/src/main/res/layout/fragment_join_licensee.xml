@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinLicenseeFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black"
+        android:tag="license">
+
+        <TextView
+            android:id="@+id/tvciTitle2l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사업장 여부"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rgciLicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvciTitle2l">
+
+            <RadioButton
+                android:id="@+id/rbciOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="○ "
+                android:textColor="@color/set2White"/>
+            <RadioButton
+                android:id="@+id/rbciNoOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✕"
+                android:textColor="@color/set2White"/>
+        </RadioGroup>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

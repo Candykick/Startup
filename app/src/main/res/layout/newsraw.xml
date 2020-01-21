@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/set2Black"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical">
+
+    <!--ImageView 원래 크기: 150 * 103-->
+
+    <ImageView
+        android:id="@+id/ivNewsRaw"
+        android:layout_width="117dp"
+        android:layout_height="80dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp">
+        <TextView
+            android:id="@+id/tvNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“즉각 맞대응하면 진짜 무역분쟁 될 것”…해명에도 ‘뒷북 조치’ 지적 이어져"
+            android:textColor="@color/set2White"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tvNewsContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="손정의 소프트뱅크 회장이 4일 방한해 이재용 삼성전자 부회장, 정의선 현대차그룹 수석부회장, 구광모 LG그룹 회장 등 재계 총수들을 만날 것으로 알려졌다. 3일 재계에 따르..."
+            android:textColor="@color/set2White"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorNotSelectable"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"/>
+
+    <ImageButton
+        android:id="@+id/btnNewsBookmark"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>

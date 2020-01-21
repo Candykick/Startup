@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinAdv1Fragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black">
+
+        <TextView
+            android:id="@+id/tvjaTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이력을 올려주세요."
+            android:textSize="18sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvJoinAdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvjaTitle1"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <Button
+            android:id="@+id/btnJoinAdvRaw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추가하기"
+            android:textSize="15sp"
+            android:textColor="@color/set2White"
+            android:onClick="@{()->fragment.addCareer()}"
+            android:background="@color/set2GrayBlue"
+            app:layout_constraintTop_toBottomOf="@+id/rvJoinAdv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

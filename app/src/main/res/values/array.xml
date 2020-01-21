@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="strUserType">
+        <item>창업희망자</item>
+        <item>투자자</item>
+        <item>외주사업가</item>
+        <item>조언가</item>
+    </string-array>
+
+    <string-array name="strArrayYear">
+        <item>10대</item>
+        <item>20세~24세</item>
+        <item>25세~29세</item>
+        <item>30세~34세</item>
+        <item>35세~39세</item>
+        <item>40세~44세</item>
+        <item>45세~49세</item>
+        <item>50세~54세</item>
+        <item>55세~59세</item>
+        <item>60대 이상</item>
+    </string-array>
+
+    <string-array name="strMoney">
+        <item>500만원~1000만원</item>
+        <item>1000만원~1500만원</item>
+        <item>1500만원~2000만원</item>
+        <item>2000만원~2500만원</item>
+        <item>2500만원~3000만원</item>
+        <item>3000만원~5000만원</item>
+        <item>5000만원 이상</item>
+    </string-array>
+
+    <string-array name="strInvType">
+        <item>씨드머니</item>
+        <item>A시리즈</item>
+        <item>B시리즈</item>
+        <item>C시리즈</item>
+        <item>지분</item>
+    </string-array>
+
+    <string-array name="strArrayAsk">
+        <item>에러 및 이용장애</item>
+        <item>외주마켓 분쟁 해결요청</item>
+        <item>외주마켓 이용문의</item>
+        <item>오픈채팅방 이용문의</item>
+        <item>조언 구하기 이용문의</item>
+        <item>팀원모집 및 매칭 관련문의</item>
+        <item>투자유치 관련 문의</item>
+        <item>투자자계정 관련 문의</item>
+        <item>조언가계정 관련 문의</item>
+        <item>광고 게시 제안</item>
+        <item>창업뉴스 게시문의</item>
+        <item>기타 건의사항</item>
+    </string-array>
+
+    <string-array name="strAdvType">
+        <item>아이디어 구체화</item>
+        <item>사업자 등록</item>
+        <item>홍보 및 광고</item>
+        <item>법률 관련(일반)</item>
+        <item>법률 관련(특허)</item>
+        <item>회계 관련</item>
+        <item>인력 관리</item>
+        <item>경영 관련</item>
+        <item>개발 관련</item>
+        <item>디자인 관련</item>
+    </string-array>
+
+
+
+
+    <string-array name="strDesignTab">
+        <item>전체</item>
+        <item>웹/모바일 디자인</item>
+        <item>PPT,인포그래픽</item>
+        <item>명함,인쇄물</item>
+        <item>상세페이지,배너</item>
+        <item>3D모델링,도면</item>
+        <item>로고디자인</item>
+        <item>SNS,커뮤니티</item>
+        <item>패키지,북커버</item>
+        <item>웹툰,캐릭터</item>
+        <item>캘리그라피</item>
+        <item>일러스트,삽화</item>
+        <item>캐리커쳐,인물</item>
+        <item>간판디자인</item>
+        <item>공간,인테리어</item>
+        <item>현수막,POP</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strProgrammingTab">
+        <item>전체</item>
+        <item>쇼핑몰,커머스</item>
+        <item>웹페이지</item>
+        <item>모바일 앱</item>
+        <item>프로그램 개발</item>
+        <item>게임</item>
+        <item>QA,테스트</item>
+        <item>챗봇</item>
+        <item>서버 구축</item>
+        <item>데이터베이스</item>
+        <item>빅데이터/데이터분석</item>
+        <item>기술지원</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strContentsTab">
+        <item>전체</item>
+        <item>영상</item>
+        <item>사진</item>
+        <item>더빙,녹음</item>
+        <item>음악,사운드</item>
+        <item>엔터테이너</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strMarkettingTab">
+        <item>전체</item>
+        <item>종합광고대행</item>
+        <item>블로그,카페</item>
+        <item>SNS</item>
+        <item>유튜브</item>
+        <item>인스타그램</item>
+        <item>블로그 체험단</item>
+        <item>쇼핑몰,스토어</item>
+        <item>앱 마케팅</item>
+        <item>키워드,배너광고</item>
+        <item>검색최적화,SEO</item>
+        <item>지도등록,리뷰</item>
+        <item>포털질문,답변</item>
+        <item>언론홍보</item>
+        <item>마케팅 노하우</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strDocumentTab">
+        <item>전체</item>
+        <item>맞춤양식</item>
+        <item>카피라이팅</item>
+        <item>타이핑</item>
+        <item>대량인쇄</item>
+        <item>기타</item>
+    </string-array>
+    
+    <string-array name="strConsultingTab">
+        <item>전체</item>
+        <item>법률,법무</item>
+        <item>세무회계</item>
+        <item>창업,경영진단</item>
+        <item>사업계획,제안</item>
+        <item>리서치,서베이</item>
+        <item>해외사업</item>
+        <item>HR,인사</item>
+        <item>업무지원,CS</item>,
+        <item>자산관리,재테크</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strMakerTab">
+        <item>전체</item>
+        <item>대량생산</item>
+        <item>공방 제작</item>
+        <item>3D프린터</item>
+        <item>맞춤제작</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strTranslateTab">
+        <item>전체</item>
+        <item>번역</item>
+        <item>통역</item>
+        <item>영상번역</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strPlaceTab">
+        <item>전체</item>
+        <item>공공사무실</item>
+        <item>장소 대여</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="strAddNewMarket">
+        <item>기본사항</item>
+        <item>패키지</item>
+        <item>설명</item>
+        <item>이미지</item>
+        <item>요청사항</item>
+    </string-array>
+</resources>

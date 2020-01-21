@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.marketAct.AddNewMarketActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="@color/set2Black">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/set2Black">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tlAddNewMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabTextColor="@color/set2Gray"
+                    app:tabSelectedTextColor="@color/set2White"
+                    app:tabIndicatorColor="@color/set2White"/>
+                <FrameLayout
+                    android:id="@+id/ctAddNewMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/btnAddNewMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="다음 단계로"
+                    android:onClick="@{() -> activity.newmarketNext()}"
+                    android:background="@color/set2GrayBlue"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+
+<!--
+<android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/set2Black"
+                >
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tlAddNewMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:tabTextColor="@color/set2Gray"
+                    app:tabSelectedTextColor="@color/set2White"
+                    app:tabIndicatorColor="@color/set2White"/>
+                <FrameLayout
+                    android:id="@+id/ctAddNewMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tlAddNewMarket"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+                <Button
+                    android:id="@+id/btnAddNewMarket"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="다음 단계로"
+                    android:onClick="@{() -> activity.newmarketNext()}"
+                    android:background="@color/set2GrayBlue"
+                    app:layout_constraintTop_toBottomOf="@+id/ctAddNewMarket"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+-->

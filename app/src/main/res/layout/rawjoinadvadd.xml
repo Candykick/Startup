@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnJoinAddRaw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="추가하기"
+        android:textSize="15sp"
+        android:textColor="@color/set2White"
+        android:background="@color/set2GrayBlue"
+        android:layout_marginTop="5dp"/>
+
+</FrameLayout>

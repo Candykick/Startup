@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/ivRawICProfile2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="3dp"/>
+            <TextView
+                android:id="@+id/tvRawICName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="사탕왕"
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ivRawCMStar1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:id="@+id/ivRawCMStar2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:id="@+id/ivRawCMStar3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:id="@+id/ivRawCMStar4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:id="@+id/ivRawCMStar5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRawICComment2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="20dp"
+            android:text="플레이스토어 앱 중에서 해당 서비스를 제공하는 앱이 있었습니다. 농장 관련 앱이었는데, 거기에 부가 기능으로 님께서 말씀하신 서비스를 제공했던 기억이 납니다."
+            android:textColor="@color/set2White"/>
+    </LinearLayout>
+
+</LinearLayout>

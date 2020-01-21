@@ -1,0 +1,92 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinInvFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black">
+
+        <TextView
+            android:id="@+id/tvjiTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="투자희망금액"
+            android:textSize="20sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Spinner
+            android:id="@+id/spjiMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strMoney"
+            android:textColor="@color/set2White"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjiTitle2"/>
+
+        <TextView
+            android:id="@+id/tvciTitle8r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="투자유형"
+            android:textSize="20sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spjiMoney"/>
+        <Spinner
+            android:id="@+id/spjiTypeInvest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strInvType"
+            android:textColor="@color/set2White"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvciTitle8r"/>
+
+        <TextView
+            android:id="@+id/tvjiTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="명함이 있다면 올려주세요(선택사항)."
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spjiTypeInvest" />
+        <ImageView
+            android:id="@+id/ivjiCard"
+            android:src="@drawable/insertcard"
+            android:onClick="@{()->fragment.fnNameCard()}"
+            android:layout_width="216dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvjiTitle3"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

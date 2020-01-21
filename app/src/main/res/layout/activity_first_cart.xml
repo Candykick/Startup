@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.cartAct.FirstCartActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black">
+
+            <CheckBox
+                android:id="@+id/cbFirstCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7색깔 알람 전부 받기"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/llFirstCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cbFirstCart"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btnFirstCartRed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border" />
+                <Button
+                    android:id="@+id/btnFirstCartOrange"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border_orange" />
+                <Button
+                    android:id="@+id/btnFirstCartYellow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border_yellow" />
+                <Button
+                    android:id="@+id/btnFirstCartGreen"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border_green" />
+                <Button
+                    android:id="@+id/btnFirstCartBlue"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border_blue" />
+                <Button
+                    android:id="@+id/btnFirstCartNavy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border_navy" />
+                <Button
+                    android:id="@+id/btnFirstCartPurple"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_border_purple" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnFirstChatOk"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/set2GrayBlue"
+                android:text="확인했습니다."
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cbFirstCartPm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매일 오후 9:00"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnFirstChatOk"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="20dp"/>
+            <CheckBox
+                android:id="@+id/cbFirstCartAm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매일 오전 12:00"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/cbFirstCartPm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:id="@+id/tvFirstChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="알람 받는 시각"
+                android:textColor="@color/set2White"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/cbFirstCartAm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

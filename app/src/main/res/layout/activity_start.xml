@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/set2Black">
+
+    <FrameLayout
+        android:id="@+id/llLogin"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/llLogin"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/ivTitleLogo"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/logo" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

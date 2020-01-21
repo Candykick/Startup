@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.loginAccount.JoinStartActivity"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/glJoinStart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"/>
+        <android.support.constraint.Guideline
+            android:id="@+id/glJoinStart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+        <android.support.constraint.Guideline
+            android:id="@+id/glJoinStart3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/joinceobtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/glJoinStart1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="@{()->activity.joinCeo()}"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/joininvbtn"
+            app:layout_constraintTop_toTopOf="@+id/glJoinStart1"
+            app:layout_constraintBottom_toBottomOf="@+id/glJoinStart2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="@{()->activity.joinInv()}"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/joinoutbtn"
+            app:layout_constraintTop_toTopOf="@+id/glJoinStart2"
+            app:layout_constraintBottom_toBottomOf="@+id/glJoinStart3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="@{()->activity.joinOut()}"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/joinadvbtn"
+            app:layout_constraintTop_toTopOf="@+id/glJoinStart3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="@{()->activity.joinAdv()}"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

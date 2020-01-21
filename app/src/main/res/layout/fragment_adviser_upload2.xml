@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.adviserAct.AdviserUpload2Fragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black">
+
+        <TextView
+            android:id="@+id/tvAdvUploadTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="글 내용"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+        <LinearLayout
+            android:id="@+id/llHtmlEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdvUploadTitle3"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_format_bold_black_24dp"
+                android:scaleType="fitXY"
+                android:onClick="@{() -> fragment.fnBold()}"
+                android:layout_marginEnd="4dp"/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_format_italic_black_24dp"
+                android:scaleType="fitXY"
+                android:onClick="@{() -> fragment.fnItalic()}"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="4dp"/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_format_underlined_black_24dp"
+                android:scaleType="fitXY"
+                android:onClick="@{() -> fragment.fnUnderline()}"
+                android:layout_marginStart="2dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etAdvUploadContents"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/borderline"
+            android:gravity="top|start"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llHtmlEditText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/set2White"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

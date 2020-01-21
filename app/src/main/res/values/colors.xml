@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorAskPrimary">#A6635B</color>
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorPrimaryDark">#456999</color>-->
+    <color name="colorAskPrimaryDark">#804C46</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="toolbarTitle">#FFFFFF</color>
+    <color name="colorNotSelectable">#cccccc</color>
+    <color name="toolbarBackground">#507BB3</color>
+    <color name="toolbarAskBackground">#BF7269</color>
+    <!--<color name="toolbarDivider">#f2f2f2</color>-->
+    <color name="toolbarDivider">#73B0FF</color>
+
+    <!-- Color Set 1: Purple + White + Dark Gray -->
+    <!--<color name="colorPrimaryDark">#776AA1</color>-->
+    <color name="set1Purple">#A593E0</color>
+    <color name="set1NormalGray">#E0E3DA</color>
+    <color name="set1White">#FFFFF3</color>
+    <color name="set1DarkGray">#566270</color>
+
+    <!-- Color Set 2: Blue + Gray + Black -->
+    <!--<color name="colorPrimaryDark">#1F6699</color>
+    <color name="set2Blue">#2B90D9</color>
+    <color name="set2Gray">#D9E1E8</color>
+    <color name="set2GrayBlue">#9BAEC8</color>
+    <color name="set2GrayBlack">#323745</color>
+    <color name="set2Black">#282C37</color>
+    <color name="set2White">#FFFFF3</color>-->
+
+    <!-- Color Set 2: Purple + Blue + Black
+    <color name="colorPrimaryDark">#2B2C54</color>
+    <color name="set2Blue">#AAABD3</color>
+    <color name="set2Gray">#CBA6C3</color>
+    <color name="set2GrayBlue">#ABC8E0</color>
+    <color name="set2GrayBlack">#444454</color>
+    <color name="set2Black">#F8FAFF</color>
+    <color name="set2White">#353866</color> -->
+
+    <color name="colorPrimaryDark">#1A8C06</color>
+    <color name="set2Blue">#23BF08</color>
+    <color name="set2Gray">#56A902</color>
+    <color name="set2GrayBlue">#A3BF08</color>
+    <color name="set2GrayBlack">#0C4003</color>
+    <color name="set2Black">#F8FAFF</color>
+    <color name="set2White">#353866</color>
+
+    <color name="colorButton">#E58B50</color>
+
+    <color name="newsetDarkBlue">#35495D</color>
+    <color name="newsetPureWhite">#FFFFFF</color>
+    <color name="newsetWhite">#F4F4F4</color>
+    <color name="newsetGrayWhite">#D4D4D4</color>
+    <color name="newsetGreenBlue">#83CBC4</color>
+    <color name="newsetYellow">#FFB100</color>
+
+    <color name="newsetIdeaNotice">#FFFCD7</color>
+</resources>

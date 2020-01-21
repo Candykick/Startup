@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/set2Black">
+    
+    <ImageView
+        android:id="@+id/ivAdviserRaw"
+        android:layout_width="144dp"
+        android:layout_height="80dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="12dp">
+        <TextView
+            android:id="@+id/tvAdviserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우수몽"
+            android:textColor="@color/set2White"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tvAdviserJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="(전)인디카튜닝 이사"
+            android:textColor="@color/set2White"/>
+        <TextView
+            android:id="@+id/tvAdviserIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="앱개발자로 일하는 평범한 개발자입니다."
+            android:textColor="@color/set2White"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</LinearLayout>

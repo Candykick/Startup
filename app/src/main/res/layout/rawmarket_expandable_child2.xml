@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/set2Black">
+
+    <ImageView
+        android:id="@+id/ivEPChild2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"/>
+    <ImageView
+        android:id="@+id/ivEPStatus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/circle_border_green"
+        app:layout_constraintBottom_toBottomOf="@+id/ivEPChild2"
+        app:layout_constraintRight_toRightOf="@+id/ivEPChild2"/>
+
+    <TextView
+        android:id="@+id/tvEPTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/ivEPChild2"
+        app:layout_constraintLeft_toRightOf="@+id/ivEPChild2"
+        android:text="세금계산서 발행 가능"
+        android:textSize="14sp"
+        android:textColor="@color/set2White"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"/>
+    <TextView
+        android:id="@+id/tvEPDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivEPStatus"
+        app:layout_constraintLeft_toRightOf="@+id/ivEPChild2"
+        android:text="디자인 전문 1인 기업"
+        android:textSize="16sp"
+        android:textColor="@color/set2Gray"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+    <TextView
+        android:id="@+id/tvEPName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvEPDes"
+        app:layout_constraintLeft_toRightOf="@+id/ivEPChild2"
+        android:text="Prettiest"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        android:textColor="@color/set2White"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/ivEPChild2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="만족도"
+                android:textColor="@color/set2Gray"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvEPSatis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="4.6/5.0"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="총 작업 수"
+                android:textColor="@color/set2Gray"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvEPOrderNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="721건"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="평균응답시간"
+                android:textColor="@color/set2Gray"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvEPAnswerTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1시간 이내"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

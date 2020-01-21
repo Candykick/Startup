@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llIdeaAddComment2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/ivIdeaCommentProfile2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_account_circle_black_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글을 남겨주세요."
+            android:layout_marginStart="3dp"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvIdeaComment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnIdeaMoreComments2"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="다음 댓글 더보기..."
+        android:background="#00000000"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:paddingStart="35dp"/>
+
+</LinearLayout>

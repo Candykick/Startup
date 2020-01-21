@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.loginAccount.PermissionActivity"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/set2Black">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivPmLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/logo"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/tvPmMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPermissionTitle"
+                android:textSize="15sp"
+                android:textColor="@color/set2White"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPmLogo"/>
+
+            <ImageView
+                android:id="@+id/ivPmLine"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/permissionline"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPmMain"/>
+
+            <ImageView
+                android:id="@+id/ivPmCamera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="35dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPmLine"/>
+            <TextView
+                android:id="@+id/tvPmCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카메라"
+                android:textSize="18sp"
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/ivPmCamera"
+                app:layout_constraintTop_toTopOf="@+id/ivPmCamera"/>
+            <TextView
+                android:id="@+id/tvPmCameraSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPermissionCamera"
+                android:textColor="@color/set2White"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="@+id/tvPmCamera"
+                app:layout_constraintTop_toBottomOf="@+id/tvPmCamera"/>
+
+
+            <ImageView
+                android:id="@+id/ivPmSave"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_file_download_black_24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="35dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPmCameraSub"/>
+            <TextView
+                android:id="@+id/tvPmSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저장"
+                android:textSize="18sp"
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/ivPmSave"
+                app:layout_constraintTop_toTopOf="@+id/ivPmSave"/>
+            <TextView
+                android:id="@+id/tvPmSaveSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPermissionSave"
+                android:textSize="15sp"
+                android:textColor="@color/set2White"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="@+id/tvPmSave"
+                app:layout_constraintTop_toBottomOf="@+id/tvPmSave"/>
+
+            <TextView
+                android:id="@+id/tvPmSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPermissionSub"
+                android:textSize="13sp"
+                android:textColor="@color/set2White"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPmSaveSub"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnPermissionOk"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/set2GrayBlue"
+            android:text="확인"
+            android:textSize="19sp"
+            android:onClick="@{() -> activity.fnPermissionOk()}" />
+
+    </LinearLayout>
+
+</layout>

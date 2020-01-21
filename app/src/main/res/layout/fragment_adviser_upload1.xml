@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.adviserAct.AdviserUpload1Fragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black">
+
+        <TextView
+            android:id="@+id/tvAdvUploadTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="글 제목"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+        <EditText
+            android:id="@+id/etAdvUploadTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdvUploadTitle1"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/tvAdvUploadTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/etAdvUploadTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+        <Spinner
+            android:id="@+id/spAdvUploadCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strAdvType"
+            app:layout_constraintLeft_toRightOf="@+id/tvAdvUploadTitle2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAdvUploadTitle"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"/>
+
+        <CheckBox
+            android:id="@+id/cbAdvUploadUserOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="작성자 비공개하기"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdvUploadTitle2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/tvAdvUploadTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이미지 추가"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/cbAdvUploadUserOpen"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdvUploadTitle4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+        <!--<Button
+            android:id="@+id/btnAdvUpload"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/set2GrayBlue"
+            android:text="이미지 추가하기"
+            android:textSize="19sp"
+            android:onClick="@{()->fragment.btnAddImage()}"
+            app:layout_constraintTop_toBottomOf="@+id/vpUploadImage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp" />-->
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

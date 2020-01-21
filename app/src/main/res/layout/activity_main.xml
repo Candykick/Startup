@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.MainActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarmain"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelinem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <LinearLayout
+                android:id="@+id/llMain0"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:weightSum="3">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/set2GrayBlue"
+                    android:onClick="@{() -> activity.fnMainAsk()}"
+                    android:text="문의하기" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/set2GrayBlue"
+                    android:onClick="@{() -> activity.fnMainIdea()}"
+                    android:text="아이디어 공간" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:background="@color/set2GrayBlue"
+                    android:onClick="@{() -> activity.fnMainReference()}"
+                    android:text="자료실" />
+
+            </LinearLayout>
+
+
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/autoPagerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="h,22:7"
+                app:layout_constraintTop_toBottomOf="@+id/llMain0"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:id="@+id/btnMOutsourcing"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/set2GrayBlue"
+                android:onClick="@{() -> activity.fnMainMarket()}"
+                android:text="외주마켓"
+                app:layout_constraintDimensionRatio="h,22:8"
+                android:layout_marginRight="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/guidelinem"
+                app:layout_constraintTop_toBottomOf="@+id/autoPagerView"/>
+            <Button
+                android:id="@+id/btnMChat"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/set2GrayBlue"
+                android:text="대화하기"
+                android:onClick="@{() -> activity.fnMainTalk()}"
+                app:layout_constraintDimensionRatio="h,22:8"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/guidelinem"
+                app:layout_constraintTop_toBottomOf="@+id/btnMOutsourcing"/>
+            <Button
+                android:id="@+id/ivChatCircle"
+                android:clickable="false"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="9"
+                android:textSize="16sp"
+                android:textColor="@color/set2Black"
+                android:background="@drawable/circle_border_green"
+                app:layout_constraintBottom_toBottomOf="@+id/btnMChat"
+                app:layout_constraintRight_toRightOf="@+id/btnMChat" />
+
+            <Button
+                android:id="@+id/btnMNews"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/set2GrayBlue"
+                android:text="창업 뉴스"
+                android:onClick="@{() -> activity.fnMainNews()}"
+                app:layout_constraintDimensionRatio="h,22:8"
+                android:layout_marginLeft="2dp"
+                app:layout_constraintLeft_toLeftOf="@+id/guidelinem"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/autoPagerView"/>
+            <Button
+                android:id="@+id/btnMBuildTeam"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/set2GrayBlue"
+                android:text="조언가그룹"
+                android:onClick="@{() -> activity.fnMainAdviser()}"
+                app:layout_constraintDimensionRatio="h,22:8"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="2dp"
+                app:layout_constraintLeft_toLeftOf="@+id/guidelinem"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMNews"/>
+
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/autoPagerView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="h,22:7"
+                app:layout_constraintTop_toBottomOf="@+id/btnMBuildTeam"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/llMain3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical|start">
+
+                <ImageView
+                    android:id="@+id/btnKiup"
+                    android:layout_width="79dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ibk" />
+
+                <ImageView
+                    android:id="@+id/btnSanupBank"
+                    android:layout_width="96dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/kdb" />
+
+                <ImageView
+                    android:id="@+id/btnPosco"
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/posco" />
+
+                <ImageView
+                    android:id="@+id/btnKaist"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/kaist" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMain2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/llMain3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical|start">
+
+                <ImageView
+                    android:id="@+id/btnKBBank"
+                    android:layout_width="92dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/kb" />
+
+                <ImageView
+                    android:id="@+id/btnKibo"
+                    android:layout_width="95dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/kibotwo" />
+
+                <ImageView
+                    android:id="@+id/btnKodit"
+                    android:layout_width="92dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/kodittwo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMain1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:layout_constraintBottom_toTopOf="@+id/llMain2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical|start">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="후원 >"
+                    android:textColor="@color/set2White"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="top"/>
+
+                <ImageView
+                    android:id="@+id/btnGovVenture"
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/govventure" />
+
+                <ImageView
+                    android:id="@+id/btnKosme"
+                    android:layout_width="115dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/kosme" />
+
+                <ImageView
+                    android:id="@+id/btnkipo"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/kipo" />
+            </LinearLayout>
+
+            <!--<ImageView
+                android:id="@+id/btnWadiz"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/wadiz_logo_black"/>-->
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

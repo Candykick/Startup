@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.marketAct.addNewMarket.AddMarketImageFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set2Black"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvImageTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메인 이미지"
+            android:textColor="@color/set2White"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+        <ImageView
+            android:id="@+id/ivANMMainImage"
+            android:layout_width="250dp"
+            android:layout_height="187dp"
+            android:src="@drawable/addnewmarketimage"
+            app:layout_constraintTop_toBottomOf="@+id/tvImageTitle1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="15dp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

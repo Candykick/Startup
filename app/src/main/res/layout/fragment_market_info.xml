@@ -1,0 +1,102 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.marketAct.MarketInfoFragment"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFMITitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="불라불라불라불라"
+            android:textSize="15sp"
+            android:textColor="@color/set2White"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tvFMIExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아이디어가 있다면 언제든 오세요 다 해드림 ㅎㅎ"
+            android:textSize="13sp"
+            android:textColor="@color/set2White"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정횟수"
+                android:textSize="13sp"
+                android:textColor="@color/set2White" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="13dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvFMIModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00회"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/set2White" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="작업일"
+                android:textSize="13sp"
+                android:textColor="@color/set2White" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="13dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvFMIDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00일"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/set2White" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

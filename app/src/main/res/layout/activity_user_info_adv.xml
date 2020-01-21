@@ -1,0 +1,275 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.userInfo.UserInfoAdvActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarUserInfoAdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/ctlUserInfoAdv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/newsetDarkBlue"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+                <View
+                    android:id="@+id/placeholderUserInfoAdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.8"/>
+                <FrameLayout
+                    android:id="@+id/flToolbarUserInfoAdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.3">
+                    <LinearLayout
+                        android:id="@+id/llToolbarUserInfoAdv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvUserNameAdv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/set2Black"
+                            android:textSize="25sp"/>
+                        <TextView
+                            android:id="@+id/tvEmailAdv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/set2Black" />
+                    </LinearLayout>
+                </FrameLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsUserInfoAdv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/newsetWhite"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvTypeUserInfoAdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="유 형 :  조 언 가"
+                    android:textSize="23sp"
+                    android:textColor="@color/set2White"
+                    android:textStyle="bold"
+                    android:background="@color/newsetPureWhite"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle1UserInfoAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 현재 직함/대표 이력"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTypeUserInfoAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/tvUserInfo1Adv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전 (주)2002인터네셔널 대표"
+                    android:textSize="20sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle1UserInfoAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="45dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle2UserInfoAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 한줄 소개"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUserInfo1Adv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/tvUserInfo2Adv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수출수입 1세대 전문가"
+                    android:textSize="20sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle2UserInfoAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="45dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle3UserInfoAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 명함"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUserInfo2Adv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="20dp"/>
+                <ImageView
+                    android:id="@+id/ivUserInfo3Adv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="h,9:5"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle3UserInfoAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginEnd="45dp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle4UserInfoAdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="● 상세 이력"
+                    android:textSize="17sp"
+                    android:textColor="@color/set2White"
+                    app:layout_constraintTop_toBottomOf="@+id/ivUserInfo3Adv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="20dp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvUserInfo4Adv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle4UserInfoAdv"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/llUserInfoAdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/rvUserInfo4Adv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="2">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="63dp"
+                        android:layout_weight="1"
+                        android:background="@color/newsetGreenBlue"
+                        android:text="로그아웃"
+                        android:onClick="@{()->activity.logoutUser()}"
+                        android:textColor="@color/newsetPureWhite"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="5dp"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="63dp"
+                        android:layout_weight="1"
+                        android:background="@color/newsetGreenBlue"
+                        android:text="회원탈퇴"
+                        android:onClick="@{()->activity.signoutUser()}"
+                        android:textColor="@color/newsetPureWhite"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <!--<android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnUIChatAdv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> activity.fnChat()}"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="15dp"
+            app:srcCompat="@drawable/ic_chat_bubble_outline_black_24dp"
+            app:layout_anchor="@+id/nsUserInfoAdv"
+            app:layout_anchorGravity="bottom|right|end"/>-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarUserInfoAdv"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/newsetDarkBlue"
+            app:layout_anchor="@id/flToolbarUserInfoAdv"
+            app:title="">
+            <LinearLayout
+                android:id="@+id/llRealToolbarAdv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Space
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="@dimen/image_small_width" />
+                <TextView
+                    android:id="@+id/tvUserNameAdv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/set2Black"
+                    android:textSize="20sp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/image_small_width"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/btnUserInfoAdvModify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수정"
+                    android:onClick="@{()->activity.modifyUserInfo()}"
+                    android:textColor="@color/newsetPureWhite"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:background="@null" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/ivUserInfoAdv2"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_width"
+            android:layout_gravity="center"
+            app:layout_behavior=".view.base.ToolbarCustomBehavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

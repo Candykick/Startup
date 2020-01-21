@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/set2Black"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llJoinAdvRaw1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etJoinAddRaw1"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="날짜 입력"
+            android:maxLines="1"
+            android:textSize="15sp"
+            android:inputType="date"
+            android:textColor="@color/set2White"
+            android:textColorHint="@color/set2White"/>
+        <EditText
+            android:id="@+id/etJoinAddRaw2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:hint="이력 입력(최대 3줄)"
+            android:maxLines="3"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:textColorHint="@color/set2White"/>
+        <!--<Button
+            android:id="@+id/btnJoinDeleteRaw1"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:background="@color/newsetGrayWhite"
+            android:layout_marginStart="2dp"/>-->
+    </LinearLayout>
+
+</RelativeLayout>

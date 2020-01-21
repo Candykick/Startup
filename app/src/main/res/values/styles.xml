@@ -1,0 +1,88 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorAccent">@color/set2White</item>
+        <item name="colorControlNormal">@color/set2Gray</item>
+        <!--<item name="android:actionBarStyle">@style/AppTheme.ActionBarStyle</item>-->
+    </style>
+
+    <style name="AppThemeAsk" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorAskPrimary</item>
+        <item name="colorPrimaryDark">@color/colorAskPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:actionBarStyle">@style/AppTheme.ActionBarStyle</item>-->
+    </style>
+
+    <!--<style name="AppTheme.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>-->
+
+    <style name="AppThemeStart" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorAccent">@color/set2White</item>
+        <item name="colorControlNormal">@color/set2Gray</item>
+    </style>
+
+    <style name="AppThemeNoAnimation" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/newsetDarkBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorAccent">@color/set2White</item>
+        <item name="colorControlNormal">@color/set2Gray</item>
+    </style>
+
+    <style name="AppThemeNew" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/newsetDarkBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorAccent">@color/set2White</item>
+        <item name="colorControlNormal">@color/set2Gray</item>
+        <!--<item name="android:actionBarStyle">@style/AppTheme.ActionBarStyle</item>-->
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--타이틀 바 제거-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--AlertDialog Theme-->
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/set2White</item>
+        <item name="android:typeface">monospace</item>
+        <!--<item name="android:textSize">10sp</item>-->
+    </style>
+
+    <!-- Facebook SMS 로그인 화면 Custom Theme -->
+    <style name="AppLoginTheme" parent="Theme.AccountKit">
+        <!-- icon -->
+        <item name="com_accountkit_primary_color">@color/set2Blue</item>
+        <item name="com_accountkit_primary_text_color">@color/set2White</item>
+        <item name="com_accountkit_secondary_text_color">@color/set2White</item>
+        <item name="com_accountkit_background_color">@color/set2Black</item>
+        <item name="com_accountkit_input_background_color">@color/set2Black</item>
+        <item name="com_accountkit_input_border_color">@color/set2Blue</item>
+        <item name="com_accountkit_input_text_color">@color/set2White</item>
+        <item name="com_accountkit_text_color">@color/set2White</item>
+        <item name="com_accountkit_button_background_color">@color/set2GrayBlue</item>
+        <item name="com_accountkit_button_border_color">@color/set2GrayBlue</item>
+        <item name="com_accountkit_button_text_color">@color/set2White</item>
+        <item name="com_accountkit_input_accent_color">@color/set2Black</item>
+    </style>
+
+</resources>

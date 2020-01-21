@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinPersonalFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black"
+        android:tag="personal">
+
+        <TextView
+            android:id="@+id/tvciTitle1l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="성별"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RadioGroup
+            android:id="@+id/rgciGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/tvciTitle1l"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rbciMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남성"
+                android:textColor="@color/set2White"/>
+            <RadioButton
+                android:id="@+id/rbciWoman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여성"
+                android:textColor="@color/set2White"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvciTitle1r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나이"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgciGender"/>
+        <Spinner
+            android:id="@+id/spciYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strArrayYear"
+            android:textColor="@color/set2White"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/tvciTitle1r"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgciGender"/>
+
+        <TextView
+            android:id="@+id/tvciTitle2r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="역할(여러 개 선택 가능)"
+            android:textSize="16sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spciYear"/>
+
+        <CheckBox
+            android:id="@+id/cbciCeo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대표"
+            android:textColor="@color/set2White"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/cbciPM"
+            app:layout_constraintTop_toBottomOf="@+id/tvciTitle2r"/>
+        <CheckBox
+            android:id="@+id/cbciProvider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기획자"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="@+id/cbciPM"
+            app:layout_constraintTop_toBottomOf="@+id/cbciCeo"/>
+        <CheckBox
+            android:id="@+id/cbciDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개발자"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="@+id/cbciPM"
+            app:layout_constraintTop_toBottomOf="@+id/cbciProvider"/>
+        <CheckBox
+            android:id="@+id/cbciDesigner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="디자이너"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="@+id/cbciPM"
+            app:layout_constraintTop_toBottomOf="@+id/cbciDeveloper"/>
+        <CheckBox
+            android:id="@+id/cbciMarketer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마케터"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="@+id/cbciPM"
+            app:layout_constraintTop_toBottomOf="@+id/cbciDesigner"/>
+        <CheckBox
+            android:id="@+id/cbciPM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PM(프로젝트 매니저)"
+            android:textColor="@color/set2White"
+            android:layout_marginRight="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbciMarketer"/>
+        <CheckBox
+            android:id="@+id/cbciOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기타 역할"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="@+id/cbciPM"
+            app:layout_constraintTop_toBottomOf="@+id/cbciPM"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

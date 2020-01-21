@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/set2Black">
+    <ImageView
+        android:id="@+id/ivRawVPImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="h,16:9" />
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/btnRawVPImageX"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_cross_15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:id="@+id/btnRawVPImageAdd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/addnewmarketimage"
+        app:layout_constraintDimensionRatio="h,16:9"/>
+</android.support.constraint.ConstraintLayout>

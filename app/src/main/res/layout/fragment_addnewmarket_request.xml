@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.marketAct.addNewMarket.RequestforCustomerFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/set2Black"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvRequestTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="요청사항"
+            android:textColor="@color/set2White"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:id="@+id/tvRequestTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(선택)"
+            android:textColor="@color/set2White"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRequestTitle1"
+            app:layout_constraintLeft_toRightOf="@+id/tvRequestTitle1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"/>
+        <EditText
+            android:id="@+id/etANMRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="의뢰인에게 요청할 질문을 입력해주세요."
+            android:background="@drawable/bordergrid2"
+            android:textColor="@color/set2White"
+            android:textSize="15sp"
+            android:lines="6"
+            android:gravity="top"
+            android:textColorHint="@color/set2White"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequestTitle2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

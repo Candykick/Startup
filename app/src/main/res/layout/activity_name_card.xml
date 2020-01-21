@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.loginAccount.NameCardActivity" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/svCamera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:padding="0dp"/>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#99FFFFFF"
+            android:src="@null"
+            app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:onClick="@{()->activity.btnFilm()}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#99FFFFFF"
+            android:src="@null"
+            app:srcCompat="@drawable/ic_highlight_black_24dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:onClick="@{()->activity.btnLight()}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

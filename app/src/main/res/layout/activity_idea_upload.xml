@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.idea.IdeaUploadActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black">
+
+            <TextView
+                android:id="@+id/tvIdeaUploadTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="글 제목"
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <EditText
+                android:id="@+id/etIdeaUploadTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdeaUploadTitle1"
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/tvIdeaUploadTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="글 내용"
+                android:textColor="@color/set2White"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/etIdeaUploadTitle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+            <EditText
+                android:id="@+id/etIdeaUploadContents"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/borderline"
+                android:gravity="top|left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdeaUploadTitle2"
+                app:layout_constraintBottom_toTopOf="@+id/btnUploadIdea"
+                android:textColor="@color/set2White"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btnUploadIdea"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/set2GrayBlue"
+                android:text="등록하기"
+                android:textSize="17sp"
+                android:onClick="@{() -> activity.fnUpload()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:background="@color/set2Black"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvChatMain2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디어 게시판"
+        android:textColor="@color/set2White"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tvChatMain2Alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="새 댓글이 달렸습니다."
+        android:textColor="@color/set2White"/>
+
+</LinearLayout>

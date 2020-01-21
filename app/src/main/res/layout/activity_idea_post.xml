@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.idea.IdeaPostActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsIdeaPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvIdeaTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="야 진짜 좋은 아이디어가 생각났다 함 봐봐라"
+                    android:textColor="@color/set2White"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <ImageView
+                    android:id="@+id/ivIdeaProfile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvIdeaTitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/ic_account_circle_black_24dp"/>
+                <TextView
+                    android:id="@+id/tvIdeaUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="네메시스"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="@+id/ivIdeaProfile"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivIdeaProfile"
+                    app:layout_constraintLeft_toRightOf="@+id/ivIdeaProfile"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:id="@+id/tvIdeaContents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="가나다라마가나다라마가나다라마가나다라마가나다"
+                    android:textColor="@color/set2White"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@+id/ivIdeaProfile"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llIdeaAddComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:onClick="@{() -> activity.btnOpenComment()}"
+                    app:layout_constraintTop_toBottomOf="@+id/tvIdeaContents"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="40dp">
+                    <ImageView
+                        android:id="@+id/ivIdeaCommentProfile"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/ic_account_circle_black_24dp"
+                        android:layout_marginStart="3dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="댓글을 남겨주세요."
+                        android:layout_marginStart="3dp"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvIdeaComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/llIdeaAddComment"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <Button
+                    android:id="@+id/btnIdeaMoreComments"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="다음 댓글 더보기..."
+                    android:onClick="@{() -> activity.btnOpenComment()}"
+                    android:background="#00000000"
+                    app:layout_constraintTop_toBottomOf="@+id/rvIdeaComment"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="35dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnIdeaBoardModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> activity.modifyIdea()}"
+            android:layout_margin="15dp"
+            app:srcCompat="@drawable/ic_pen_black_24dp"
+            app:layout_anchor="@+id/nsIdeaPost"
+            app:layout_anchorGravity="bottom|right|end"/>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

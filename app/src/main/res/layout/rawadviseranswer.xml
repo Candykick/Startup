@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/lineAdvPost"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/newsetGreenBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+    <TextView
+        android:id="@+id/tvAdvPostBestAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="베  스  트  답  변"
+        android:textStyle="bold"
+        android:textColor="@color/newsetGreenBlue"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/lineAdvPost"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivAdvPostProfile"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostBestAnswer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+    <ImageView
+        android:id="@+id/ivAdvPostMedal"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAdvPostProfile"
+        app:layout_constraintRight_toRightOf="@+id/ivAdvPostProfile"
+        android:src="@drawable/medal" />
+
+    <TextView
+        android:id="@+id/tvAdvPostAnswerUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="국변 윤태수"
+        android:textColor="@color/set2White"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@+id/ivAdvPostProfile"
+        app:layout_constraintLeft_toRightOf="@+id/ivAdvPostProfile"/>
+    <TextView
+        android:id="@+id/tvAdvPostUserRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="랭킹 7등 | 베스트답변 24개"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@+id/ivAdvPostProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAdvPostProfile"
+        app:layout_constraintLeft_toRightOf="@+id/ivAdvPostProfile"/>
+    <TextView
+        android:id="@+id/tvAdvPostUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="민중을 대변하는 국민변호사"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAdvPostProfile"
+        app:layout_constraintLeft_toRightOf="@+id/ivAdvPostProfile"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpRawAdvImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintTop_toBottomOf="@+id/ivAdvPostProfile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <com.candykick.startup.view.base.HtmlTextView
+        android:id="@+id/tvAdvPostAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="해당되지 않습니다. 걱정 안 하셔도 됩니다!"
+        android:textColor="@color/set2White"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/vpRawAdvImage"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/tvAdvPostRecommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천수 130"
+        android:textColor="@color/newsetYellow"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostAnswer"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdvPostRecommend"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <Button
+            android:id="@+id/btnAdvPostRecommend"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="이 답변 추천하기"
+            android:background="@color/set2GrayBlue"
+            android:textColor="@color/set2White"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="17sp"/>
+        <Button
+            android:id="@+id/btnAdvPostSeeInfo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="조언가 정보 보기"
+            android:background="@color/set2GrayBlue"
+            android:textColor="@color/set2White"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

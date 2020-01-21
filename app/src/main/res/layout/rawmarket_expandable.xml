@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="@color/set2Black"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvEPParent"
+        android:text="환불 처리는 이렇게!"
+        android:textColor="@color/set2White"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

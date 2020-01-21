@@ -1,0 +1,120 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.candykick.startup.view.loginAccount.loginFragment.JoinWantInvFragment"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/set2Black"
+        android:tag="inv">
+
+        <TextView
+            android:id="@+id/tvciTitle3l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:text="보유자본"
+            android:textSize="20sp"
+            android:textColor="@color/set2White"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spciMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strMoney"
+            android:textColor="@color/set2White"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvciTitle3l"/>
+
+        <TextView
+            android:id="@+id/tvciTitle3r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="투자희망금액"
+            android:textSize="20sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spciMoney"/>
+        <Spinner
+            android:id="@+id/spciInvest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strMoney"
+            android:textColor="@color/set2White"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvciTitle3r"/>
+
+        <CheckBox
+            android:id="@+id/cbciOpenToInv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:checked="true"
+            android:text="투자자에게 공개"
+            android:textColor="@color/set2White"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spciInvest" />
+
+        <TextView
+            android:id="@+id/tvciTitle7r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="투자희망유형"
+            android:textSize="20sp"
+            android:textColor="@color/set2White"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbciOpenToInv2"/>
+        <Spinner
+            android:id="@+id/spciTypeInvest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/strInvType"
+            android:textColor="@color/set2White"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvciTitle7r"/>
+
+        <CheckBox
+            android:id="@+id/cbciOpenToInv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:checked="true"
+            android:text="투자자에게 공개"
+            android:textColor="@color/set2White"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spciTypeInvest" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

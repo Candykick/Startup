@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.candykick.startup.view.cartAct.CartActivity"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbarlayout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set2Black">
+
+            <CheckBox
+                android:id="@+id/cbCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7색깔 알람 전부 받기"
+                android:checked="true"
+                android:textColor="@color/set2White"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/llCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/cbCart"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btnCartRed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border"
+                    android:onClick="@{() -> activity.btnRed()}" />
+                <Button
+                    android:id="@+id/btnCartOrange"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border_orange"
+                    android:onClick="@{() -> activity.btnOrange()}" />
+                <Button
+                    android:id="@+id/btnCartYellow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border_yellow"
+                    android:onClick="@{() -> activity.btnYellow()}" />
+                <Button
+                    android:id="@+id/btnCartGreen"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border_green"
+                    android:onClick="@{() -> activity.btnGreen()}" />
+                <Button
+                    android:id="@+id/btnCartBlue"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border_blue"
+                    android:onClick="@{() -> activity.btnBlue()}" />
+                <Button
+                    android:id="@+id/btnCartNavy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border_navy"
+                    android:onClick="@{() -> activity.btnNavy()}" />
+                <Button
+                    android:id="@+id/btnCartPurple"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/set2Black"
+                    android:background="@drawable/circle_border_purple"
+                    android:onClick="@{() -> activity.btnPurple()}"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvCart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:divider="@color/newsetGrayWhite"
+                android:dividerHeight="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/llCart"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
